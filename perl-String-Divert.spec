@@ -3,7 +3,7 @@
 Summary:	String::Divert - String Object supporting Folding and Diversions
 Name:		perl-%{real_name}
 Version:	0.96
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
