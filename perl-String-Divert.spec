@@ -1,16 +1,18 @@
-%define real_name String-Divert
+%define upstream_name    String-Divert
+%define upstream_version 0.96
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	String::Divert - String Object supporting Folding and Diversions
-Name:		perl-%{real_name}
-Version:	0.96
-Release:	%mkrel 6
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/R/RS/RSE/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/R/RS/RSE/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 String::Divert is small Perl 5 module providing a scalar-like string
@@ -20,7 +22,7 @@ The idea is to decouple the sequential generation of output from the
 nested and non-sequential structure of the output.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -39,5 +41,3 @@ rm -rf %{buildroot}
 %doc README
 %{perl_vendorlib}/String/*
 %{_mandir}/*/*
-
-
