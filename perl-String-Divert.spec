@@ -8,7 +8,7 @@ Release:	4
 Summary:	String::Divert - String Object supporting Folding and Diversions
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/R/RS/RSE/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
