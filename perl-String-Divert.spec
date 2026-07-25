@@ -2,14 +2,14 @@
 %define upstream_version 0.96
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	String::Divert - String Object supporting Folding and Diversions
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/R/RS/RSE/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/String-Divert
+Source0:	https://cpan.metacpan.org/authors/id/R/RS/RSE/String-Divert-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
