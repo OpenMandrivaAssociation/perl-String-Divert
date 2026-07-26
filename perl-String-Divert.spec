@@ -1,15 +1,13 @@
 %define upstream_name    String-Divert
-%define upstream_version 0.96
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.96
+Release:	6
 
 Summary:	String::Divert - String Object supporting Folding and Diversions
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/String-Divert
-Source0:	https://cpan.metacpan.org/authors/id/R/RS/RSE/String-Divert-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RS/RSE/String-Divert-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ The idea is to decouple the sequential generation of output from the
 nested and non-sequential structure of the output.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -41,9 +39,7 @@ make test
 %changelog
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.960.0-1mdv2010.0
 + Revision: 404415
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.96-6mdv2009.0
+- rebuild using %0.96 Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.96-6mdv2009.0
 + Revision: 258390
 - rebuild
 
